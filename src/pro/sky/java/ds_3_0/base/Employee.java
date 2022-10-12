@@ -4,14 +4,16 @@ public class Employee {
 
     private final String fullName;
     private int department;
-    private int salary;
+    public int salary;
     private final int id;
 
-    public Employee(String fullName, int department, int salary, int id) {
+    public static int counter = 0;
+
+    public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.id = id;
+        this.id = counter++;
     }
 
     public String getFullName() {
